@@ -26,7 +26,7 @@ First prepare a model with randomly initialized parameters
     python prepare_model_for_pretraining.py --vision_model_name_or_path google/siglip-base-patch16-256 --text_model_name_or_path OuteAI/Lite-Mistral-150M-v2-Instruct --dest ./ReVision-250M-64-16-random
     ```
 
-In `pretrain.py`, change the huggingface cache appropriately `os.environ["HF_DATASETS_CACHE"]` and point to your local directoy. Also, if you are planning to push the pretrained model to huggingface hub, change this `anonymoususerrevision/ReVision-250M-64-16` to your desired model identifier. It is strongly advise to thoroughly go through the pretraining code and change variable values as needed. For changing arguments and training hyper parameters, check `args.py`
+In `pretrain.py`, change the huggingface cache appropriately `os.environ["HF_DATASETS_CACHE"]` and point to your local directoy. Also, if you are planning to push the pretrained model to huggingface hub, change this `anonymoususerrevision/ReVision-250M-64-16` to your desired model identifier. It is strongly advised to thoroughly go through the pretraining code and change variable values as needed. For changing arguments and training hyper parameters, check `args.py`
 
 For pretraining run the following command. 
 
