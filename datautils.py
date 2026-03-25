@@ -39,7 +39,7 @@ class LLAVARecapDataset(Dataset):
         # Decode the image from Base64
 
         image = data["image"]
-        prompt = "what is this?"
+        prompt = "what is this?"  #hardcoded
         try:
             response = data["conversations"][1]["value"]
         except:
@@ -56,7 +56,7 @@ class LLAVARecapDataset(Dataset):
             draw.text((10, 10), "Default Image", fill=(0, 0, 0))  # Add some text
             prompt = "No prompt"
             response = "No response"
-        if prompt is None or response is None:
+        if prompt is None or response is None: #half-dead code as line 42 hardcodes the variable prompt
             print("Training data issue")
             prompt = "No prompt"
             response = "No response"
