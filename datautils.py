@@ -19,7 +19,7 @@ MAX_LEN = 512
 
 class LLAVARecapDataset(Dataset):
     def __init__(self) -> None:
-        cache_dir = os.environ["HF_DATASETS_CACHE"]
+        cache_dir = os.environ.get("HF_DATASETS_CACHE")
         if cache_dir is not None:
             print(cache_dir)
             self.dataset = load_dataset(
