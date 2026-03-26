@@ -66,8 +66,7 @@ class LLAVARecapDataset(Dataset):
 class LLAVADataset(Dataset):
     def __init__(self, dataset_name="liuhaotian/LLaVA-Pretrain", processor=None):
         # self.dataset = load_dataset(dataset_name)
-        cache_dir = os.environ.get("HF_DATASETS_CACHE") #no check for Error in case when HF_DATASETS_CACHE does not exist. Use get()
-
+        cache_dir = os.environ.get("HF_DATASETS_CACHE") #Using get() function to obtain None in case the variable does nto exist
         self.image_zip_path = hf_hub_download(
             repo_id=dataset_name,
             filename="images.zip",
